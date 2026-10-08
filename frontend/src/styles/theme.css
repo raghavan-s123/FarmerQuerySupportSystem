@@ -1,0 +1,128 @@
+/* =========================================================
+   KrishiMitra Design Tokens - Bright, modern "sunrise over
+   the fields" theme: fresh greens, sunny yellow, sky blue.
+   ========================================================= */
+
+:root {
+  --color-primary: #2E7D32;
+  --color-primary-light: #66BB6A;
+  --color-accent-yellow: #FFB300;
+  --color-accent-sky: #29ABE2;
+  --color-accent-coral: #FF7043;
+
+  --color-bg: #F6FBF2;
+  --color-surface: #FFFFFF;
+  --color-border: #E3EEDD;
+
+  --color-text: #1B2A1E;
+  --color-text-muted: #5B6B5E;
+  --color-text-inverse: #FFFFFF;
+
+  --color-success: #43A047;
+  --color-warning: #FFB300;
+  --color-danger: #E53935;
+
+  --font-display: 'Poppins', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --shadow-soft: 0 4px 16px rgba(46, 125, 50, 0.08);
+  --shadow-hover: 0 8px 28px rgba(46, 125, 50, 0.16);
+
+  --sidebar-width: 250px;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: var(--font-display);
+  margin: 0;
+}
+
+a { text-decoration: none; color: inherit; }
+button { font-family: var(--font-body); cursor: pointer; }
+
+.app-shell { display: flex; min-height: 100vh; }
+.main-content { flex: 1; padding: 28px 36px; max-width: 1200px; }
+
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  border: none; border-radius: var(--radius-md); padding: 12px 22px;
+  font-weight: 600; font-size: 0.95rem;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+.btn:active { transform: translateY(1px); }
+.btn-primary {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+  color: var(--color-text-inverse);
+  box-shadow: var(--shadow-soft);
+}
+.btn-primary:hover { box-shadow: var(--shadow-hover); }
+.btn-accent { background: var(--color-accent-yellow); color: #3A2900; }
+.btn-outline { background: transparent; border: 1.5px solid var(--color-primary); color: var(--color-primary); }
+.btn-block { width: 100%; }
+.btn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.card {
+  background: var(--color-surface); border-radius: var(--radius-lg); padding: 22px;
+  box-shadow: var(--shadow-soft); border: 1px solid var(--color-border);
+}
+.card-accent-left { border-left: 5px solid var(--color-primary); }
+
+.stat-card {
+  background: var(--color-surface); border-radius: var(--radius-lg); padding: 20px;
+  box-shadow: var(--shadow-soft); display: flex; flex-direction: column; gap: 6px;
+}
+.stat-card .stat-value { font-family: var(--font-display); font-size: 2rem; font-weight: 700; color: var(--color-primary); }
+.stat-card .stat-label { color: var(--color-text-muted); font-size: 0.9rem; }
+
+.grid { display: grid; gap: 20px; }
+.grid-2 { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+.grid-3 { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+.grid-4 { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
+
+.form-group { margin-bottom: 16px; }
+.form-label { display: block; font-weight: 600; font-size: 0.88rem; margin-bottom: 6px; color: var(--color-text); }
+.form-input, .form-select, textarea.form-input {
+  width: 100%; padding: 12px 14px; border-radius: var(--radius-sm);
+  border: 1.5px solid var(--color-border); font-size: 0.95rem; font-family: var(--font-body);
+  background: #FCFEFA; transition: border-color 0.15s ease;
+}
+.form-input:focus, .form-select:focus { outline: none; border-color: var(--color-primary-light); }
+
+.badge { display: inline-block; padding: 4px 12px; border-radius: 999px; font-size: 0.75rem; font-weight: 600; }
+.badge-green { background: #E5F5E7; color: var(--color-primary); }
+.badge-yellow { background: #FFF4D9; color: #8A5D00; }
+.badge-blue { background: #E3F5FC; color: #0E6E96; }
+.badge-red { background: #FDE7E6; color: var(--color-danger); }
+
+.page-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; flex-wrap: wrap; gap: 12px; }
+.text-muted { color: var(--color-text-muted); }
+.divider { height: 1px; background: var(--color-border); margin: 18px 0; }
+.empty-state { text-align: center; padding: 40px 20px; color: var(--color-text-muted); }
+
+.live-dot {
+  display: inline-block; width: 8px; height: 8px; border-radius: 50%;
+  background: var(--color-success); margin-right: 6px;
+  box-shadow: 0 0 0 rgba(67, 160, 71, 0.5); animation: pulse 1.6s infinite;
+}
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(67, 160, 71, 0.5); }
+  70% { box-shadow: 0 0 0 6px rgba(67, 160, 71, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(67, 160, 71, 0); }
+}
+
+@media (max-width: 768px) {
+  .app-shell { flex-direction: column; }
+  .main-content { padding: 20px; }
+}

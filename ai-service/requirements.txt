@@ -1,0 +1,40 @@
+# ================================================
+# AI-Based Farmer Advisory System - Python AI Service
+# Install (inside a Python 3.11 virtual environment):
+#   pip install -r requirements.txt
+# ================================================
+
+fastapi>=0.111.0
+uvicorn>=0.29.0
+python-multipart>=0.0.9
+python-dotenv>=1.0.1
+pydantic>=2.7.4
+
+# Groq LLM (Llama 3.x)
+groq>=0.9.0
+
+# LangChain + LangGraph (agent orchestration for the RAG pipeline)
+langchain>=0.2.6
+langchain-community>=0.2.6
+langgraph>=0.1.5
+
+# RAG - embeddings + vector store
+sentence-transformers>=2.7.0
+faiss-cpu>=1.8.0
+pandas>=2.2.2
+
+# Multilingual support: BERT-family language detection + translation
+# (Module: Multilingual Query Interface - Tamil / Telugu / English)
+transformers>=4.41.0
+torch>=2.2.0
+deep-translator>=1.11.4
+
+# Voice module (Speech-to-Text / Text-to-Speech)
+SpeechRecognition>=3.10.4
+gTTS>=2.5.1
+pydub>=0.25.1
+
+# Disease detection CNN
+tensorflow>=2.16.1
+pillow>=10.3.0
+numpy>=1.26.4

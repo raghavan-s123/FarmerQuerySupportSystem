@@ -1,0 +1,30 @@
+# Java / Maven
+backend/target/
+*.class
+
+# Python
+ai-service/__pycache__/
+ai-service/**/__pycache__/
+ai-service/.env
+ai-service/venv/
+ai-service/vectorstore/*.bin
+ai-service/voice_outputs/
+ai-service/disease/dataset/
+ai-service/disease/*.h5
+ai-service/disease/class_names.json
+ai-service/data/kcc_dataset.csv
+ai-service/data/crop_recommendation_raw.csv
+ai-service/data/crop_recommendation_qa.csv
+*.pyc
+
+# Node / React
+frontend/node_modules/
+frontend/build/
+
+# Uploads
+backend/uploads/disease-images/*
+!backend/uploads/disease-images/.gitkeep
+
+# OS
+.DS_Store
+Thumbs.db

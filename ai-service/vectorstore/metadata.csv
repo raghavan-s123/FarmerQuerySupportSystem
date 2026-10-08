@@ -1,0 +1,9 @@
+question,answer,category,source,document
+ jointing, flowering and grain filling stages for best yield.,irrigation,knowledge_base.csv,"Q:  jointing
+A:  flowering and grain filling stages for best yield."
+ and avoid excess nitrogen. Chemical control with cartap hydrochloride can be used if needed.,pest_control,,knowledge_base.csv,"Q:  and avoid excess nitrogen. Chemical control with cartap hydrochloride can be used if needed.
+A: pest_control"
+ pest control and providing a safety net against crop failure.,farming_practice,,knowledge_base.csv,"Q:  pest control and providing a safety net against crop failure.
+A: farming_practice"
+ and spray neem-based bio-pesticide during flowering.,pest_control,,knowledge_base.csv,"Q:  and spray neem-based bio-pesticide during flowering.
+A: pest_control"
